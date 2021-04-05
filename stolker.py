@@ -16,6 +16,7 @@ def tracker(portfolio):
   data.dropna(inplace=True)
 
   total = 0.00
+  total_pl = 0.00
 
   for ticker in ticker_names:
     cur_price = data[ticker].tail(1).iloc[0].Open
@@ -32,16 +33,25 @@ def tracker(portfolio):
         cur_value = cur_price * float(tickers[ticker][0])
         pl = cur_value - avg_cost
         # TODO: pl_percent = 0.00
-        
+
+        total_pl += pl
         if pl < 0:
           sign = "-"
           pl *= -1
 
-        print("\tTotal P/L: " + sign + "$" + "{:.2f}".format(pl))
+        print("\tP/L: " + sign + "$" + "{:.2f}".format(pl))
       print("\n")
 
   print("-----------------------------------")
-  print("Total: \t$" + "{:.2f}".format(total))
+  print("Total: \t\t$" + "{:.2f}".format(total))
+
+  if total_pl < 0:
+    sign = "-"
+    total_pl *= -1
+  else: 
+    sign = "+"
+
+  print("Total P/L: \t" + sign + "${:.2f}".format(total_pl)) 
 
 if __name__ == "__main__":
   if path.exists("./portfolio.txt"):
