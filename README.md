@@ -27,3 +27,6 @@ MSFT 2
 ```
 
 Finally, run the program with `python3 stolker.py`.
+
+## Demo
+![image](https://user-images.githubusercontent.com/11053683/113626391-1af82a00-9630-11eb-8448-37e0d0022f73.png)
