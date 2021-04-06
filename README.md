@@ -1,5 +1,11 @@
 # Stolker
 
+## Preview
+CLI UI coming soon:
+
+![image](https://user-images.githubusercontent.com/11053683/113663349-dd1ef400-9677-11eb-96a6-7793804c97e4.png)
+
+
 ## Basics
 
 Stolker is a basic Python-based CLI client to view your portfolio's holdings. It uses the Yahoo Finance API to gather information about your portfolio.
@@ -28,5 +34,3 @@ MSFT 2
 
 Finally, run the program with `python3 stolker.py`.
 
-## Demo
-![image](https://user-images.githubusercontent.com/11053683/113626391-1af82a00-9630-11eb-8448-37e0d0022f73.png)
